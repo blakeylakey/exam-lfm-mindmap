@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mermaid Diagrams with Tabs</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+</head>
+<body>
+
+<div class="tabs">
+    <button class="tab" onclick="changeTab(event, 'diagram1')">STAT</button>
+    <button class="tab" onclick="changeTab(event, 'diagram2')">Diagram 2</button>
+    <button class="tab" onclick="changeTab(event, 'diagram3')">Diagram 3</button>
+</div>
+
+<div id="diagram1" class="mermaid diagram">
+    %%{init: {'theme':'dark'}}%%
+    mindmap
+    root((STAT Accounting))
+        ["CRVM/CARVM
+        Pre-Operative Date
+        < 1/1/2017"]
+            [Assumptions
+            SVL sec. 4]
+                [Prevailing mortality table
+                CSO for life insurance
+                IAM for annuities]
+                [Dynamic interest rate
+                Reference rate based on Moody's composite yield]
+            CRVM
+                [NLP
+                Modified
+                FPT
+                CRVM]
+                    ["Mean rsv (DPA)
+                    Mid rsv (UPL)
+                    Continuous rsv
+                    IPCR"]
+                ["Whole life
+                Fixed and guaranteed terms
+                Deficiency rsv (GP < NP) "]
+                    [Participating policies
+                    Dividend scale & divisible surplus
+                    Contribution Principle]
+                ["Term
+                Guideline XXX
+                Contract Segmentation Method
+                max(Unitary/CRVM, Segmented)
+                Deficiency rsv (GP < NP)"]
+                ["Universal Life
+                Terms not fixed and guaranteed
+                UL CRVM (8 step)"]
+                    ["ULSG
+                    Stipulated premium design
+                    Shadow account design
+                    Guideline XXX sec. 7"]
+                        ["AG 38 (AXXX)
+                        Specifies 8 product designs
+                        AG 48 reserve financing transactions"]
+                    ["Indexed UL
+                    AG 36 methods for IGR
+                    Type 1 IGRM (HaR)
+                    Type 2a CRVM w/ UAMV (no HaR)
+                    Type 2 CRVM w/ UMV (no HaR)"]
+
+            CARVM
+                ["Fixed deferred annuities
+                "]
+        Idea 2
+            Subidea 2.1
+                Detail 2.1.1
+        Idea 3
+            Subidea 3.1
+</div>
+
+<div id="diagram2" class="mermaid diagram" style="display:none">
+    graph LR;
+    E-->F;
+    E-->G;
+    F-->H;
+    G-->H;
+</div>
+
+<div id="diagram3" class="mermaid diagram" style="display:none">
+    pie
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
